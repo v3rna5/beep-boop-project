@@ -1,29 +1,32 @@
-// Business Logic
-function NumToWord(str){
- //var vowels = ['beep', 'boop', 'sentence']
-  var number = ["1", "2", "3", "4", "5", "6", "7", "8","9","0"]
-  //var strarr = str.split("");
-  //var index;
-  //var str;
-  for(var i = 0; i < number.length; i++){
-    //for(var j = 0; j < vowels.length; j++){
+//Business Logic
+var Words = function(num) {
+var arrnumbers = [1,2,3,4,5,6,7,8,9,0]
+var num;
+for (var i=0; i<arrnumbers.length; i++) {
+for (var j = 0; j<num.lenght; i++) {
 
-      if(number[i] != number[0] {
-    var sliced = str.slice(0, index);
-    str = str.slice(index) + sliced + "beep";
-  }else{
-    str = str + "way";
+}
+}
+
+  if ((num === 0)) {
+    return $(".True").text("Beep!");;
   }
-$(".Resulting").text(str);
-  }
+  if (( num === 1)) {
+    $(".True").text("Boop!");
+}
+  if (( num === 3)) {
+    $(".True").text("I'm sorry, Dave. I'm afraid I can't do that.");
+}
+}
 
 
-// User Logic
-$(document).ready(function(){
-  $("#BeepBoop").submit(function(event){
+// user interface logic
+$(document).ready(function() {
+  $("form#NumberToWord").submit(function(event) {
     event.preventDefault();
-    var userInput = parseInt($("#numbers").val());
-    var userResult = NumToWord(userInput);
-    $("#result").show();
+    var num = parseInt($("input#numbers").val());
+    var result = Words(num);
+
+    $("#resultTrue").show();
   });
 });
