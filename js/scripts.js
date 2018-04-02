@@ -1,33 +1,53 @@
+//business end
 $(document).ready(function() {
-  $("form#numwords").submit(function(event) {
+$("form#numwords").submit(function(event) {
     event.preventDefault();
-    var input = $("input#number").val();
-    var results = "";
 
-    for(var i=0; i<input.length; i++ ) {
-	     if( input[i] === '0' ) {
-		       results = "Beep";
-        } else {
-		        results += input[i];
-        }
+var input = $("input#number").val();
+var results = "";
+var numbers = "";
 
-           if( input[i] === '1' ) {
-               results = "Boop";
-            } else {
-                results += input[i];
-            }
 
-               if( input[i] === '3' ) {
-                   results = "David";
-                } else {
-                    results += input[i];
-                }
+//front end
+for(var i=0; i<input.length; i++){
+
+	 if (input[0] === "0") {
+	    results =  "Beep!";
+      $("#output").text(results);
+
+} else {
+
+
+}
+
+  if (input[0] === '1') {
+      results = "Boop!";
+      $("#output").text(results);
+
+
+
+} else {
+
+}
+   if(input[0] === '3') {
+      results =  "I'm sorry, Dave. I'm afraid I can't do that.";
+      $("#output").text(results);
+
+} else {
+
+}
+
 }
 
 
 
 
-    $("#output").text(results);
+
+
+
+
+    $("#output").text(results += input);
     $("#output").show();
+
   });
-});
+    });

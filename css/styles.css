@@ -1,0 +1,19 @@
+body {
+  background-color: lightgrey;
+}
+
+
+h1 {
+  color: blue;
+  font-family: serif;
+
+}
+
+#output {
+  margin:5%;
+  text-align: center;
+  display: none;
+  border: solid;
+  border-style: groove;
+  color: blue;
+}
