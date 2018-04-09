@@ -1,53 +1,37 @@
 //business end
+var BeepBoop = function(num){
+var word = [];
+
+for(var i=0; i<=num; i++){
+var results_one = i.toString();
+
+  if (i !=0 && i % 3 === 0){
+    word.push("I'm sorry, Dave. I'm afraid I can't do that");
+
+    } else if (i === 1) {
+    word.push("Boop");
+
+    } else if (i === 0) {
+    word.push("Beep")
+
+    } else {
+      word.push(i)
+      //return (i)
+}
+}
+  return word;
+}
+
+//user interface
 $(document).ready(function() {
-$("form#numwords").submit(function(event) {
+$("#numwords").submit(function(event) {
     event.preventDefault();
 
-var input = $("input#number").val();
-var results = "";
-var numbers = "";
+var userInput = $("#number").val();
+console.log(userInput);
+var userResults = BeepBoop(userInput);
 
+$(".results").text(userResults);
 
-//front end
-for(var i=0; i<input.length; i++){
-
-	 if (input[0] === "0") {
-	    results =  "Beep!";
-      $("#output").text(results);
-
-} else {
-
-
-}
-
-  if (input[0] === '1') {
-      results = "Boop!";
-      $("#output").text(results);
-
-
-
-} else {
-
-}
-   if(input[0] === '3') {
-      results =  "I'm sorry, Dave. I'm afraid I can't do that.";
-      $("#output").text(results);
-
-} else {
-
-}
-
-}
-
-
-
-
-
-
-
-
-    $("#output").text(results += input);
-    $("#output").show();
-
-  });
-    });
+});
+});
